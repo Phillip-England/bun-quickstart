@@ -1,5 +1,4 @@
 import type { ReactNode } from "react"
-import ReactDOMServer from "react-dom/server"
 
 
 type BaseTemplateProps = {
@@ -14,20 +13,13 @@ export function BaseTemplate({title, children}: BaseTemplateProps): JSX.Element 
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
+                <script src="https://unpkg.com/htmx.org@2.0.0"></script>
 				<link rel="stylesheet" href="/static/css/output.css" />
-				<title>{title}</title>
+				<title>{title + " - CFA Suite"}</title>
 			</head>
-			<body>
+			<body hx-boost='true'>
 				{children}
 			</body>
 		</html>
-	)
-}
-
-export function HomeTemplate(): JSX.Element {
-	return (
-		<BaseTemplate title="Home">
-			<h1>Hello World</h1>
-		</BaseTemplate>
 	)
 }

@@ -13,10 +13,11 @@
     "tailwind": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch"
   },
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
+    "jsonwebtoken": "^9.0.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-dom/server": "react-dom/server"
+    "react-dom": "^18.3.1"
   }
 }
